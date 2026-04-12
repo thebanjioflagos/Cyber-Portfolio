@@ -31,7 +31,7 @@ export const Footer = () => {
                         <a href="https://www.instagram.com/banjioflag/" target="_blank" rel="noopener noreferrer" className="hover:text-primary transition-colors" aria-label="Instagram Profile">
                             <Instagram className="w-5 h-5 text-muted-foreground hover:text-primary transition-colors cursor-pointer" />
                         </a>
-                        <a href="https://wa.me/2348077609209" target="_blank" rel="noopener noreferrer" className="hover:text-primary transition-colors" aria-label="Secure WhatsApp Handshake">
+                        <a href="/api/contact/whatsapp" target="_blank" rel="noopener noreferrer" className="hover:text-primary transition-colors" aria-label="Secure WhatsApp Handshake">
                             <MessageCircle className="w-5 h-5 text-muted-foreground hover:text-primary transition-colors cursor-pointer" />
                         </a>
                         <a href="mailto:thebanjioflagos@gmail.com" className="hover:text-primary transition-colors" aria-label="Email Me">

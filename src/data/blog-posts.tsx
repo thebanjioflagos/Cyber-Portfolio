@@ -5,8 +5,11 @@ export interface BlogPost {
     title: string;
     excerpt: string;
     date: string;
+    updatedAt?: string;
     author: string;
-    category: "Security" | "DevSecOps" | "Threat Intel" | "Leadership";
+    category: string;
+    tags?: string[];
+    takeaways?: string[];
     readTime: string;
     content: React.ReactNode;
 }
@@ -17,8 +20,15 @@ export const blogPosts: BlogPost[] = [
         title: "Anatomy of RCE: Investigating JNDI Injection Patterns",
         excerpt: "A surgical deep-dive into Java Naming and Directory Interface (JNDI) vulnerabilities and the strategic mitigation of remote code execution in enterprise ecosystems.",
         date: "April 12, 2026",
+        updatedAt: "April 13, 2026",
         author: "Olabanji Okunola",
         category: "Threat Intel",
+        tags: ["JNDI", "RCE", "Java Security", "Exploit Analysis"],
+        takeaways: [
+            "JNDI lookups must be strictly sanitized to prevent unauthenticated class loading.",
+            "Egress filtering is the most effective compensating control against remote callbacks.",
+            "Defense-in-depth requires disabling remote class loading at the JVM level."
+        ],
         readTime: "12 min read",
         content: (
             <div className="space-y-6 text-muted-foreground leading-relaxed">
@@ -42,8 +52,15 @@ export const blogPosts: BlogPost[] = [
         title: "The Detection Engineering Loop: Sigma & Sysmon",
         excerpt: "Building a resilient SOC detection pipeline by operationalizing Sysmon telemetry and Sigma rules for high-fidelity threat hunting.",
         date: "April 11, 2026",
+        updatedAt: "April 12, 2026",
         author: "Olabanji Okunola",
         category: "Defensive Ops",
+        tags: ["SIEM", "SOC", "Sigma", "Sysmon", "Detection Engineering"],
+        takeaways: [
+            "Operationalizing MITRE ATT&CK requires high-fidelity endpoint telemetry like Sysmon.",
+            "Sigma rules provide a tool-agnostic detection format for cross-platform defense.",
+            "Prioritize process creation events (Event ID 1) for early stage intrusion detection."
+        ],
         readTime: "10 min read",
         content: (
             <div className="space-y-6 text-muted-foreground leading-relaxed">
@@ -65,8 +82,15 @@ export const blogPosts: BlogPost[] = [
         title: "Shadow in the Shell: Modern 'Living off the Land'",
         excerpt: "How advanced adversaries utilize trusted system binaries (LOLBins) to bypass EDR and execute stealthy persistent operations without custom malware.",
         date: "April 10, 2026",
+        updatedAt: "April 11, 2026",
         author: "Olabanji Okunola",
         category: "Offensive Strategy",
+        tags: ["Red Team", "LOLBins", "EDR Bypass", "Stealth Persistence"],
+        takeaways: [
+            "LOLBins allow adversaries to execute actions using cryptographically signed binaries.",
+            "Monitor parent-child process relationships to detect misuse of trusted OS components.",
+            "EDR rules should focus on behavioral anomalies rather than just file signatures."
+        ],
         readTime: "15 min read",
         content: (
             <div className="space-y-6 text-muted-foreground leading-relaxed">
@@ -83,8 +107,15 @@ export const blogPosts: BlogPost[] = [
         title: "Zero-Trust CI/CD: Architecting Secure Continuous Delivery",
         excerpt: "A blueprint for integrating automated security gates (SAST, DAST, Secret Scanning) into the dev pipeline to achieve a true 'Secure-by-Design' lifecycle.",
         date: "April 08, 2026",
+        updatedAt: "April 09, 2026",
         author: "Olabanji Okunola",
         category: "DevSecOps",
+        tags: ["CI/CD", "DevSecOps", "SAST", "Pipeline Security", "Zero Trust"],
+        takeaways: [
+            "Integrate automated security scanning at every stage of the pipeline.",
+            "Enable strict secret scanning to prevent accidental credential leakage.",
+            "Implement mandatory SCA to audit third-party dependency vulnerabilities."
+        ],
         readTime: "9 min read",
         content: (
             <div className="space-y-6 text-muted-foreground leading-relaxed">
@@ -104,8 +135,15 @@ export const blogPosts: BlogPost[] = [
         title: "Identity is the New Perimeter: Hardening Multi-Cloud IAM",
         excerpt: "Moving beyond traditional firewalls to a robust Identity and Access Management (IAM) framework for secure AWS and Azure environments.",
         date: "April 05, 2026",
+        updatedAt: "April 06, 2026",
         author: "Olabanji Okunola",
         category: "Security",
+        tags: ["Cloud Security", "IAM", "AWS", "Azure", "Zero Trust"],
+        takeaways: [
+            "Identity is the primary security boundary in decentralized cloud environments.",
+            "Implement Just-In-Time (JIT) access to minimize service account exposure.",
+            "Use Service Control Policies (SCPs) to restrict high-risk global regions."
+        ],
         readTime: "11 min read",
         content: (
             <div className="space-y-6 text-muted-foreground leading-relaxed">

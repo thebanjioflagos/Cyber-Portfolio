@@ -74,9 +74,16 @@ export default function BlogPostPage() {
                         <Lightbulb className="w-4 h-4" />
                         Strategic Takeaways (AI Summary)
                     </h3>
-                    <p className="text-sm font-bold text-foreground leading-relaxed italic">
-                        {post.excerpt}
-                    </p>
+                    <ul role="list" aria-label="key-takeaways" className="space-y-3">
+                        {post.takeaways ? post.takeaways.map((point, i) => (
+                            <li key={i} className="text-sm font-bold text-foreground leading-relaxed italic flex gap-3">
+                                <span className="text-primary font-black">/</span>
+                                {point}
+                            </li>
+                        )) : (
+                            <li className="text-sm font-bold text-foreground leading-relaxed italic">{post.excerpt}</li>
+                        )}
+                    </ul>
                 </motion.div>
 
                 <motion.div

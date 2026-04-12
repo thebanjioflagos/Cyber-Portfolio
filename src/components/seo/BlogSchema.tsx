@@ -7,13 +7,15 @@ export const BlogSchema = ({ post }: { post: BlogPost }) => {
         "@type": "TechArticle",
         "headline": post.title,
         "description": post.excerpt,
+        "image": "https://thebanjioflagos.tech/og-image.png",
         "author": {
             "@type": "Person",
             "name": post.author,
-            "url": "https://thebanjioflagos.tech"
+            "url": "https://thebanjioflagos.tech",
+            "jobTitle": "Senior Cybersecurity Engineer & Fullstack Developer"
         },
         "datePublished": post.date,
-        "image": "https://thebanjioflagos.tech/og-image.png",
+        "dateModified": post.updatedAt || post.date,
         "publisher": {
             "@type": "Organization",
             "name": "Olabanji Security Hub",
@@ -22,12 +24,14 @@ export const BlogSchema = ({ post }: { post: BlogPost }) => {
                 "url": "https://thebanjioflagos.tech/logo.png"
             }
         },
+        "url": `https://thebanjioflagos.tech/blog/${post.slug}`,
         "mainEntityOfPage": {
             "@type": "WebPage",
             "@id": `https://thebanjioflagos.tech/blog/${post.slug}`
         },
-        "keywords": post.category,
-        "articleBody": "Strategic security intelligence and technical analysis."
+        "keywords": post.tags || [post.category],
+        "articleSection": post.category,
+        "articleBody": post.excerpt
     };
 
     return (

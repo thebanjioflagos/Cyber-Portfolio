@@ -55,18 +55,18 @@ export const RecruiterMode = () => {
 
                                 <div className="absolute top-full left-0 right-0 mt-2 p-2 glass border-white/10 rounded-2xl opacity-0 translate-y-2 pointer-events-none group-hover/cv:opacity-100 group-hover/cv:translate-y-0 group-hover/cv:pointer-events-auto transition-all z-20">
                                     {[
-                                        { name: "Security Engineer (Master)", file: "Olabanji_Okunola_SecurityEngineer.pdf" },
-                                        { name: "Penetration Tester", file: "Olabanji_Okunola_Pentest.pdf" },
-                                        { name: "SOC Analyst", file: "Olabanji_Okunola_SOC.pdf" },
-                                        { name: "Red Team Specialist", file: "Olabanji_Okunola_RedTeam.pdf" },
-                                        { name: "Network Security Engineer", file: "Olabanji_Okunola_Network.pdf" },
-                                        { name: "IT Security Consultant", file: "Olabanji_Okunola_Consultant.pdf" },
-                                        { name: "Threat Intelligence Analyst", file: "Olabanji_Okunola_ThreatIntel.pdf" },
-                                        { name: "Cybersecurity Analyst", file: "Olabanji_Okunola_Analyst.pdf" }
+                                        { name: "Security Engineer (Master)", file: "security-engineer.pdf" },
+                                        { name: "Penetration Tester", file: "pentester.pdf" },
+                                        { name: "SOC Analyst", file: "soc-analyst.pdf" },
+                                        { name: "Red Team Specialist", file: "red-team.pdf" },
+                                        { name: "Network Security Engineer", file: "network-security.pdf" },
+                                        { name: "IT Security Consultant", file: "it-consultant.pdf" },
+                                        { name: "Threat Intelligence Analyst", file: "threat-intel.pdf" },
+                                        { name: "Cybersecurity Analyst", file: "cyber-analyst.pdf" }
                                     ].map((cv) => (
                                         <a
                                             key={cv.name}
-                                            href={`/${cv.file}`}
+                                            href={`/cv/${cv.file}`}
                                             download
                                             className="block px-4 py-3 rounded-lg hover:bg-white/5 text-xs font-bold transition-colors"
                                         >
@@ -89,7 +89,7 @@ export const RecruiterMode = () => {
                                 <a href="https://www.instagram.com/banjioflag/" target="_blank" rel="noopener noreferrer" className="w-12 h-12 rounded-xl glass border-white/10 flex items-center justify-center hover:text-primary transition-colors cursor-pointer" title="Instagram" aria-label="Follow on Instagram">
                                     <Instagram className="w-5 h-5" />
                                 </a>
-                                <a href="https://wa.me/2348077609209" target="_blank" rel="noopener noreferrer" className="w-12 h-12 rounded-xl glass border-white/10 flex items-center justify-center hover:text-primary transition-colors cursor-pointer" title="Secure WhatsApp Handshake" aria-label="Secure WhatsApp Handshake">
+                                <a href="/api/contact/whatsapp" target="_blank" rel="noopener noreferrer" className="w-12 h-12 rounded-xl glass border-white/10 flex items-center justify-center hover:text-primary transition-colors cursor-pointer" title="Secure WhatsApp Handshake" aria-label="Secure WhatsApp Handshake">
                                     <MessageCircle className="w-5 h-5" />
                                 </a>
                             </div>

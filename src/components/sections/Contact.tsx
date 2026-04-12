@@ -15,7 +15,7 @@ const contactMethods = [
     {
         name: "Secure WhatsApp",
         value: "Request Encrypted Line",
-        href: "https://wa.me/2348077609209",
+        href: "/api/contact/whatsapp",
         icon: <MessageCircle className="w-6 h-6 text-primary" />,
         label: "Real-time Strategic Chat"
     },
