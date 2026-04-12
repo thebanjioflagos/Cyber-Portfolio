@@ -1,0 +1,158 @@
+"use client";
+
+import React from 'react';
+import { motion } from 'framer-motion';
+import { Shield, Zap, FileText, CheckCircle2, Award, Clock, Target, Code, Github, Linkedin, Mail, ChevronDown, Instagram, MessageCircle, Twitter } from 'lucide-react';
+
+const stats = [
+    { label: "Systems Hardened", value: "50+" },
+    { label: "Critical Vulnerabilities found", value: "200+" },
+    { label: "Availability SLA", value: "99.99%" },
+    { label: "Tech Stack", value: "12+ Tools" }
+];
+
+export const RecruiterMode = () => {
+    return (
+        <section id="recruiter-mode" className="py-24 px-6 relative bg-background border-t border-white/5">
+            <div className="max-w-7xl mx-auto">
+                <div className="grid grid-cols-1 lg:grid-cols-3 gap-12">
+
+                    {/* Left Column - Core Profile */}
+                    <div className="lg:col-span-1 space-y-8">
+                        <div>
+                            <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-primary/10 border border-primary/20 text-[10px] font-black uppercase tracking-widest text-primary mb-4">
+                                <Zap className="w-3 h-3 fill-primary" />
+                                Fast Path for Recruiters
+                            </div>
+                            <h2 className="text-3xl font-black mb-2 tracking-tight uppercase">OKUNOLA OLABANJI</h2>
+                            <p className="text-primary font-bold tracking-widest text-sm uppercase">Security Engineer & Fullstack Dev</p>
+                        </div>
+
+                        <div className="space-y-4">
+                            <div className="flex items-center gap-3 p-4 rounded-xl glass border-white/10">
+                                <Award className="w-5 h-5 text-primary" />
+                                <div>
+                                    <span className="text-[10px] font-bold uppercase text-muted-foreground block">Key Certifications</span>
+                                    <span className="text-sm font-bold">OSCP, CEH, Security+, Azure Admin</span>
+                                </div>
+                            </div>
+                            <div className="flex items-center gap-3 p-4 rounded-xl glass border-white/10">
+                                <Target className="w-5 h-5 text-primary" />
+                                <div>
+                                    <span className="text-[10px] font-bold uppercase text-muted-foreground block">Focus Area</span>
+                                    <span className="text-sm font-bold">Defensive Architecture & Secure Cloud Ops</span>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div className="flex flex-col gap-4">
+                            <div className="relative group/cv">
+                                <button className="w-full px-6 py-4 rounded-xl bg-primary text-primary-foreground font-black text-sm flex items-center justify-center gap-2 hover:scale-[1.02] transition-transform">
+                                    <FileText className="w-4 h-4" />
+                                    Download CV
+                                    <ChevronDown className="w-4 h-4" />
+                                </button>
+
+                                <div className="absolute top-full left-0 right-0 mt-2 p-2 glass border-white/10 rounded-2xl opacity-0 translate-y-2 pointer-events-none group-hover/cv:opacity-100 group-hover/cv:translate-y-0 group-hover/cv:pointer-events-auto transition-all z-20">
+                                    {[
+                                        { name: "Security Engineer (Master)", file: "Olabanji_Okunola_SecurityEngineer.pdf" },
+                                        { name: "Penetration Tester", file: "Olabanji_Okunola_Pentest.pdf" },
+                                        { name: "SOC Analyst", file: "Olabanji_Okunola_SOC.pdf" },
+                                        { name: "Red Team Specialist", file: "Olabanji_Okunola_RedTeam.pdf" },
+                                        { name: "Network Security Engineer", file: "Olabanji_Okunola_Network.pdf" },
+                                        { name: "IT Security Consultant", file: "Olabanji_Okunola_Consultant.pdf" },
+                                        { name: "Threat Intelligence Analyst", file: "Olabanji_Okunola_ThreatIntel.pdf" },
+                                        { name: "Cybersecurity Analyst", file: "Olabanji_Okunola_Analyst.pdf" }
+                                    ].map((cv) => (
+                                        <a
+                                            key={cv.name}
+                                            href={`/${cv.file}`}
+                                            download
+                                            className="block px-4 py-3 rounded-lg hover:bg-white/5 text-xs font-bold transition-colors"
+                                        >
+                                            {cv.name}
+                                        </a>
+                                    ))}
+                                </div>
+                            </div>
+
+                            <div className="flex gap-2">
+                                <a href="https://github.com/thebanjioflagos" target="_blank" rel="noopener noreferrer" className="w-12 h-12 rounded-xl glass border-white/10 flex items-center justify-center hover:text-primary transition-colors cursor-pointer" title="GitHub" aria-label="Visit my GitHub profile">
+                                    <Github className="w-5 h-5" />
+                                </a>
+                                <a href="https://linkedin.com/in/thebanjioflagos" target="_blank" rel="noopener noreferrer" className="w-12 h-12 rounded-xl glass border-white/10 flex items-center justify-center hover:text-primary transition-colors cursor-pointer" title="LinkedIn" aria-label="Connect on LinkedIn">
+                                    <Linkedin className="w-5 h-5" />
+                                </a>
+                                <a href="https://twitter.com/banjioflagos" target="_blank" rel="noopener noreferrer" className="w-12 h-12 rounded-xl glass border-white/10 flex items-center justify-center hover:text-primary transition-colors cursor-pointer" title="Twitter" aria-label="Follow on Twitter">
+                                    <Twitter className="w-5 h-5" />
+                                </a>
+                                <a href="https://www.instagram.com/banjioflag/" target="_blank" rel="noopener noreferrer" className="w-12 h-12 rounded-xl glass border-white/10 flex items-center justify-center hover:text-primary transition-colors cursor-pointer" title="Instagram" aria-label="Follow on Instagram">
+                                    <Instagram className="w-5 h-5" />
+                                </a>
+                                <a href="https://wa.me/2348077609209" target="_blank" rel="noopener noreferrer" className="w-12 h-12 rounded-xl glass border-white/10 flex items-center justify-center hover:text-primary transition-colors cursor-pointer" title="Secure WhatsApp Handshake" aria-label="Secure WhatsApp Handshake">
+                                    <MessageCircle className="w-5 h-5" />
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+
+                    {/* Right Column - High Density Data */}
+                    <div className="lg:col-span-2 grid grid-cols-1 md:grid-cols-2 gap-8">
+                        {/* Stats Grid */}
+                        <div className="md:col-span-2 grid grid-cols-2 md:grid-cols-4 gap-4">
+                            {stats.map((stat, i) => (
+                                <div key={i} className="p-6 rounded-2xl bg-secondary/50 border border-white/5 text-center">
+                                    <span className="text-2xl md:text-3xl font-black text-primary block mb-1">{stat.value}</span>
+                                    <span className="text-[10px] font-bold uppercase tracking-widest text-muted-foreground">{stat.label}</span>
+                                </div>
+                            ))}
+                        </div>
+
+                        {/* Performance Summary */}
+                        <div className="p-8 rounded-3xl glass border-white/10 space-y-6">
+                            <h3 className="text-xl font-black flex items-center gap-2 uppercase tracking-tight">
+                                <Shield className="w-5 h-5 text-primary" />
+                                Security Baseline
+                            </h3>
+                            <ul className="space-y-4">
+                                {[
+                                    "Zero-Trust Architecture implementation",
+                                    "Automated Penetration Testing pipelines",
+                                    "Real-time Threat Mitigation strategies",
+                                    "SIEM/IDS deployment and management"
+                                ].map((item, i) => (
+                                    <li key={i} className="flex gap-3 items-start">
+                                        <CheckCircle2 className="w-4 h-4 text-green-500 mt-1 shrink-0" />
+                                        <span className="text-sm font-semibold text-foreground/80">{item}</span>
+                                    </li>
+                                ))}
+                            </ul>
+                        </div>
+
+                        {/* Engineering Depth */}
+                        <div className="p-8 rounded-3xl glass border-white/10 space-y-6">
+                            <h3 className="text-xl font-black flex items-center gap-2 uppercase tracking-tight">
+                                <Code className="w-5 h-5 text-primary" />
+                                Systems Thinking
+                            </h3>
+                            <ul className="space-y-4">
+                                {[
+                                    "E2EE for distributed file systems",
+                                    "Decentralized Identity on Blockchain",
+                                    "High-throughput packet inspection",
+                                    "Secure Lifecycle (SDLC) integration"
+                                ].map((item, i) => (
+                                    <li key={i} className="flex gap-3 items-start">
+                                        <CheckCircle2 className="w-4 h-4 text-primary mt-1 shrink-0" />
+                                        <span className="text-sm font-semibold text-foreground/80">{item}</span>
+                                    </li>
+                                ))}
+                            </ul>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </section>
+    );
+};

@@ -1,0 +1,7 @@
+Contact: mailto:thebanjioflagos@gmail.com
+Expires: 2027-04-11T17:00:00.000Z
+Encryption: https://github.com/thebanjioflagos.gpg
+Acknowledgements: /acknowledgements
+Policy: /security-policy
+Hiring: /hiring
+Preferred-Languages: en
