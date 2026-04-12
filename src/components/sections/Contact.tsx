@@ -7,8 +7,8 @@ import { Mail, MessageCircle, Linkedin, Shield, ArrowRight, Zap } from 'lucide-r
 const contactMethods = [
     {
         name: "Direct Email",
-        value: "thebanjioflagos@gmail.com",
-        href: "mailto:thebanjioflagos@gmail.com",
+        value: "banjhi001@gmail.com",
+        href: "mailto:banjhi001@gmail.com",
         icon: <Mail className="w-6 h-6 text-primary" />,
         label: "Primary Professional Line"
     },
@@ -85,7 +85,7 @@ export const Contact = () => {
                         <h3 className="text-2xl md:text-4xl font-black mb-4">ENGINEERING THE NEXT GENERATION OF SECURITY.</h3>
                         <p className="text-muted-foreground font-bold mb-8 italic">Available for remote strategic roles and high-impact security audits.</p>
                         <a
-                            href="mailto:thebanjioflagos@gmail.com"
+                            href="mailto:banjhi001@gmail.com"
                             className="inline-flex items-center gap-2 px-10 py-5 rounded-2xl bg-primary text-primary-foreground font-black hover:scale-105 transition-all shadow-[0_0_40px_rgba(59,130,245,0.4)] relative z-20 cursor-pointer"
                         >
                             <Zap className="w-5 h-5 fill-current" />

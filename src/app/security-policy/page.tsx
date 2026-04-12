@@ -66,7 +66,7 @@ export default function SecurityPolicy() {
                             Please send a detailed report including steps to reproduce to my secure inbox:
                         </p>
                         <a 
-                            href="mailto:thebanjioflagos@gmail.com" 
+                            href="mailto:banjhi001@gmail.com" 
                             className="inline-flex items-center gap-3 px-8 py-4 rounded-xl bg-primary text-primary-foreground font-black hover:scale-105 transition-all"
                         >
                             <Mail className="w-5 h-5" />

@@ -34,7 +34,7 @@ export const Footer = () => {
                         <a href="/api/contact/whatsapp" target="_blank" rel="noopener noreferrer" className="hover:text-primary transition-colors" aria-label="Secure WhatsApp Handshake">
                             <MessageCircle className="w-5 h-5 text-muted-foreground hover:text-primary transition-colors cursor-pointer" />
                         </a>
-                        <a href="mailto:thebanjioflagos@gmail.com" className="hover:text-primary transition-colors" aria-label="Email Me">
+                        <a href="mailto:banjhi001@gmail.com" className="hover:text-primary transition-colors" aria-label="Email Me">
                             <Mail className="w-5 h-5 text-muted-foreground hover:text-primary transition-colors cursor-pointer" />
                         </a>
                     </div>

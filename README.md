@@ -40,7 +40,7 @@ npm start
 ```
 
 ## 📜 Vulnerability Disclosure
-If you find a vulnerability, please refer to the [VDP](https://thebanjioflagos.tech/security-policy) for reporting guidelines.
+If you find a vulnerability, please refer to the [VDP](https://thebanjioflagos.tech/security-policy) or contact me at [banjhi001@gmail.com](mailto:banjhi001@gmail.com) for reporting guidelines.
 
 ---
 **SECURE BY DESIGN | © 2026 OKUNOLA OLABANJI**
