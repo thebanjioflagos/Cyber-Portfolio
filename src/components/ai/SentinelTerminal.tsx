@@ -48,7 +48,7 @@ export const SentinelTerminal = () => {
             return "Displaying flagship deployments: \n- SIEM Dashboard (Live Threat Intel)\n- PhishGuard Security SaaS\n- Secure Steganography\n- Portfolio Framework (Elite Tier)";
         }
         if (normalized === '/about') {
-            return "Okunola Olabanji: Senior Cybersecurity Engineer & Fullstack Architect. Expert in Defensive Ops, Threat Intel, and Secure SDLC.";
+            return "Okunola Olabanji: Cybersecurity Engineer & Fullstack Architect. Expert in Defensive Ops, Threat Intel, and Secure SDLC.";
         }
         if (normalized === '/cv') {
             return "Role-specific CVs available in the 'Recruiter Mode' section. Specialized for Security Engineer, PenTester, and SOC Analyst roles.";

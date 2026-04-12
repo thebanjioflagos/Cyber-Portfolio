@@ -1,5 +1,5 @@
 # 🛡️ OLABANJI OKUNOLA | Cyber-Portfolio v2.0
-> **High-Performance Strategic Assets for Senior Security Engineering & Fullstack Development.**
+> **High-Performance Strategic Assets for Security Engineering & Fullstack Development.**
 
 This is a production-grade, security-hardened portfolio engineered with **Next.js 15**, **Tailwind CSS v4**, and **Framer Motion**. It serves as a unified intelligence terminal showcasing specialized expertise in SIEM/SOC operations, PenTesting, and Secure Product Development.
 

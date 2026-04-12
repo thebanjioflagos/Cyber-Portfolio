@@ -6,7 +6,7 @@ export interface KnowledgeNode {
 export const aiKnowledge: KnowledgeNode[] = [
     {
         keywords: ["who", "olabanji", "about", "identity"],
-        response: "Okunola Olabanji is a Senior Cybersecurity Engineer and Fullstack Developer specializing in Defensive Architecture and Secure Systems. He is the lead architect behind the Sentinel OS ecosystem."
+        response: "Okunola Olabanji is a Cybersecurity Engineer and Fullstack Developer specializing in Defensive Architecture and Secure Systems. He is the lead architect behind the Sentinel OS ecosystem."
     },
     {
         keywords: ["skills", "stack", "tech", "tools"],

@@ -12,7 +12,7 @@ export const BlogSchema = ({ post }: { post: BlogPost }) => {
             "@type": "Person",
             "name": post.author,
             "url": "https://thebanjioflagos.tech",
-            "jobTitle": "Senior Cybersecurity Engineer & Fullstack Developer"
+            "jobTitle": "Cybersecurity Engineer & Fullstack Developer"
         },
         "datePublished": post.date,
         "dateModified": post.updatedAt || post.date,
