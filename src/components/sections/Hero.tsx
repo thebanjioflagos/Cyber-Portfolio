@@ -30,11 +30,11 @@ export const Hero = () => {
 
                     <h1 className="text-5xl md:text-7xl font-bold tracking-tight mb-6 leading-[1.1]">
                         Neutralizing <span className="text-primary italic">Threats.</span> <br />
-                        Engineering <span className="text-glow underline decor-primary/30">Resilient</span> Systems.
+                        Engineering <span className="text-glow underline decor-primary/30">Detection.</span>
                     </h1>
 
                     <p className="text-lg md:text-xl text-muted-foreground mb-10 max-w-xl leading-relaxed">
-                        Cybersecurity Engineer & Security-Focused Fullstack Developer. I specialize in building high-performance architectures that are secure by design and resilient by nature.
+                        Cybersecurity Engineer (Detection, Threat Analysis & Offensive Security). <span className="text-foreground font-bold italic">I build systems that detect threats, and I break systems to find them first.</span>
                     </p>
 
                     <div className="flex flex-wrap gap-4">

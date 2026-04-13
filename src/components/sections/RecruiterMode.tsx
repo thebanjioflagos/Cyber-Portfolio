@@ -2,7 +2,7 @@
 
 import React from 'react';
 import { motion } from 'framer-motion';
-import { Shield, Zap, FileText, CheckCircle2, Award, Clock, Target, Code, Github, Linkedin, Mail, ChevronDown, Instagram, MessageCircle, Twitter } from 'lucide-react';
+import { Shield, Zap, FileText, CheckCircle2, Award, Clock, Target, Code, Github, Linkedin, Mail, ChevronDown, Instagram, MessageCircle, Twitter, Star } from 'lucide-react';
 
 const stats = [
     { label: "Systems Hardened", value: "50+" },
@@ -40,7 +40,7 @@ export const RecruiterMode = () => {
                                 <Target className="w-5 h-5 text-primary" />
                                 <div>
                                     <span className="text-[10px] font-bold uppercase text-muted-foreground block">Focus Area</span>
-                                    <span className="text-sm font-bold">Defensive Architecture & Secure Cloud Ops</span>
+                                    <span className="text-sm font-bold">Detection, Threat Analysis & Offensive Security</span>
                                 </div>
                             </div>
                         </div>
@@ -55,22 +55,32 @@ export const RecruiterMode = () => {
 
                                 <div className="absolute top-full left-0 right-0 mt-2 p-2 glass border-white/10 rounded-2xl opacity-0 translate-y-2 pointer-events-none group-hover/cv:opacity-100 group-hover/cv:translate-y-0 group-hover/cv:pointer-events-auto transition-all z-20">
                                     {[
-                                        { name: "Security Engineer (Master)", file: "security-engineer.pdf" },
-                                        { name: "Penetration Tester", file: "pentester.pdf" },
-                                        { name: "SOC Analyst", file: "soc-analyst.pdf" },
-                                        { name: "Red Team Specialist", file: "red-team.pdf" },
-                                        { name: "Network Security Engineer", file: "network-security.pdf" },
-                                        { name: "IT Security Consultant", file: "it-consultant.pdf" },
-                                        { name: "Threat Intelligence Analyst", file: "threat-intel.pdf" },
-                                        { name: "Cybersecurity Analyst", file: "cyber-analyst.pdf" }
+                                        // TIER 1: PRIMARY IDENTITY
+                                        { name: "Cybersecurity Engineer (Master Path)", file: "security-engineer.pdf", tier: "primary" },
+                                        
+                                        // TIER 2: SPECIALIST VARIANTS
+                                        { name: "Penetration Tester (Offensive)", file: "pentester.pdf", tier: "specialist" },
+                                        { name: "SOC Analyst / Detection Engineer", file: "soc-analyst.pdf", tier: "specialist" },
+                                        { name: "Network Security Engineer (CCNP)", file: "network-security.pdf", tier: "specialist" },
+                                        
+                                        // TIER 3: STRATEGIC DEPTH
+                                        { name: "Red Team Specialist", file: "red-team.pdf", tier: "bench" },
+                                        { name: "Threat Intelligence Analyst", file: "threat-intel.pdf", tier: "bench" },
+                                        { name: "DevSecOps Engineer", file: "devsecops.pdf", tier: "bench" },
+                                        { name: "IT Security Consultant", file: "it-consultant.pdf", tier: "bench" }
                                     ].map((cv) => (
                                         <a
                                             key={cv.name}
                                             href={`/cv/${cv.file}`}
                                             download
-                                            className="block px-4 py-3 rounded-lg hover:bg-white/5 text-xs font-bold transition-colors"
+                                            className={`block px-4 py-3 rounded-lg hover:bg-white/5 text-xs font-bold transition-colors ${
+                                                cv.tier === 'primary' ? 'bg-primary/10 text-primary border border-primary/20' : ''
+                                            }`}
                                         >
-                                            {cv.name}
+                                            <div className="flex items-center justify-between">
+                                                {cv.name}
+                                                {cv.tier === 'primary' && <Star className="w-3 h-3 fill-primary" />}
+                                            </div>
                                         </a>
                                     ))}
                                 </div>
