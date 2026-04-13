@@ -3,38 +3,38 @@ import { Shield, Lock, Terminal } from 'lucide-react';
 
 export const projects = [
     {
-        title: "Real-Time Intrusion Detection System",
-        category: "Cybersecurity / Networking",
-        description: "Engineered a Python-based IDS capable of packet sniffing, traffic inspection, and detecting port scanning, DDoS patterns, ARP spoofing, and DNS poisoning. Integrated an automated alerting pipeline (Email, SMS, Dashboard).",
+        title: "SIEM-Based Intrusion Detection & Threat Monitoring System",
+        category: "Detection Engineering / SOC",
+        description: "Built a production-grade ELK Stack SIEM pipeline ingesting Sysmon logs and live network traffic. Implemented Sigma detection rules for brute force (T1110), privilege escalation (T1068), and anomalous network activity. Simulated attacks using Metasploit, Hydra, and Nmap.",
         metrics: [
-            { label: "Detection Latency", value: "<1s" },
+            { label: "Detection Latency", value: "-30%" },
             { label: "Threat Coverage", value: "95%+" }
         ],
-        tags: ["Python", "Socket Programming", "Scapy", "IDS/IPS"],
+        tags: ["ELK Stack", "Sysmon", "Sigma Rules", "MITRE ATT&CK"],
         icon: <Shield className="w-10 h-10 text-primary" />,
-        href: "https://github.com/thebanjioflagos/SIEM-SOC-Portfolio/tree/main/detections"
-    },
-    {
-        title: "Enterprise SOC & SIEM Deployment",
-        category: "SOC Operations",
-        description: "Deployed a production-grade ELK stack with custom Logstash pipelines and Kibana dashboards. Mapped detection rules to MITRE ATT&CK and implemented automated attack simulations.",
-        metrics: [
-            { label: "Visibility", value: "Full Stack" },
-            { label: "Framework", value: "MITRE ATT&CK" }
-        ],
-        tags: ["ELK Stack", "Logstash", "Kibana", "Detection Engineering"],
-        icon: <Terminal className="w-10 h-10 text-primary" />,
         href: "https://github.com/thebanjioflagos/SIEM-SOC-Portfolio"
     },
     {
-        title: "Secure File Storage (Zero Trust)",
-        category: "Backend / Security",
-        description: "Developed a zero-trust file storage platform using Fernet E2EE, Bcrypt hashing, and RBAC. Eliminated plaintext data exposure and secured user file interactions with a Flask backend.",
+        title: "Machine Learning Phishing Detection System",
+        category: "AI / Offensive Security",
+        description: "Developed a phishing URL classifier using URL feature extraction and NLP techniques. Achieved 92% detection accuracy. Integrated into a simulated email gateway for real-time alerting and analyst triage workflows.",
         metrics: [
-            { label: "Data Exposure", value: "0%" },
-            { label: "Encryption", value: "AES-256" }
+            { label: "Accuracy", value: "92%" },
+            { label: "Risk Reduction", value: "40%" }
         ],
-        tags: ["Flask", "PostgreSQL", "Cryptography", "RBAC"],
+        tags: ["Python", "Scikit-Learn", "NLP", "Threat Intel"],
+        icon: <Terminal className="w-10 h-10 text-primary" />,
+        href: "/blog/jndi-injection-patterns"
+    },
+    {
+        title: "Real-Time Network Security Monitoring Dashboard",
+        category: "Security Operations",
+        description: "Built using Python Dash with live packet capture backend. Displays active connections, threat event feeds, and anomaly scores. Designed for SOC-style single-screen monitoring and rapid incident response.",
+        metrics: [
+            { label: "Manual Effort", value: "-50%" },
+            { label: "Live Ingestion", value: "True" }
+        ],
+        tags: ["Python Dash", "Scapy", "Network Security", "Visual Analytics"],
         icon: <Lock className="w-10 h-10 text-primary" />,
         href: "https://github.com/thebanjioflagos/SIEM-SOC-Portfolio"
     }
