@@ -37,5 +37,41 @@ export const projects = [
         tags: ["Python Dash", "Scapy", "Network Security", "Visual Analytics"],
         icon: <Lock className="w-10 h-10 text-primary" />,
         href: "https://github.com/thebanjioflagos/SIEM-SOC-Portfolio"
+    },
+    {
+        title: "PhishGuard: Neural Security SaaS",
+        category: "Security Engineering / SaaS",
+        description: "A production-ready SaaS platform for real-time phishing detection. Features a FastAPI backend, JWT-based RBAC, and a glassmorphism dashboard visualizing live threat vectors.",
+        metrics: [
+            { label: "Confidence", value: "High-Fidelity" },
+            { label: "Auth", value: "JWT-Secure" }
+        ],
+        tags: ["FastAPI", "Next.js", "Redis", "Security-as-a-Service"],
+        icon: <Zap className="w-10 h-10 text-primary" />,
+        href: "https://github.com/thebanjioflagos/web_vulnerability_scanner"
+    },
+    {
+        title: "Invisible Shield: Cryptographic Steganography",
+        category: "Cryptography / Privacy",
+        description: "Air-gapped, high-performance steganography engine utilizing AES-256 and pixel-scattering logic for covert data storage. Zero-dependency cryptographic implementation.",
+        metrics: [
+            { label: "Security", value: "Air-Gapped" },
+            { label: "Cipher", value: "AES-256-CBC" }
+        ],
+        tags: ["Python", "Cryptography", "Steganography", "PIL"],
+        icon: <Lock className="w-10 h-10 text-primary" />,
+        href: "https://github.com/thebanjioflagos/ImageSteno"
+    },
+    {
+        title: "Zero-Trust Identity & File Vault",
+        category: "Infrastructure Security",
+        description: "Secure lifecycle-managed file storage platform using E2EE and strict RBAC. Eliminates plaintext data exposure through Fernet orchestration and secure-by-design architecture.",
+        metrics: [
+            { label: "Exposure", value: "0.0%" },
+            { label: "Hardening", value: "Top-Tier" }
+        ],
+        tags: ["Flask", "PostgreSQL", "RBAC", "E2EE"],
+        icon: <Shield className="w-10 h-10 text-primary" />,
+        href: "https://github.com/thebanjioflagos/UserAuthFile"
     }
 ];
