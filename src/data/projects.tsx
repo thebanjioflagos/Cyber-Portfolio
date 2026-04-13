@@ -24,7 +24,7 @@ export const projects = [
         ],
         tags: ["Python", "Scikit-Learn", "NLP", "Threat Intel"],
         icon: <Terminal className="w-10 h-10 text-primary" />,
-        href: "/blog/jndi-injection-patterns"
+        href: "https://github.com/thebanjioflagos/PhishGuard-ML"
     },
     {
         title: "Real-Time Network Security Monitoring Dashboard",
@@ -36,7 +36,7 @@ export const projects = [
         ],
         tags: ["Python Dash", "Scapy", "Network Security", "Visual Analytics"],
         icon: <Lock className="w-10 h-10 text-primary" />,
-        href: "https://github.com/thebanjioflagos/SIEM-SOC-Portfolio"
+        href: "https://github.com/thebanjioflagos/NetSentinel-Dash"
     },
     {
         title: "PhishGuard: Neural Security SaaS",
