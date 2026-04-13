@@ -44,7 +44,9 @@ export const SentinelTerminal = () => {
             setHistory([]);
             return null;
         }
+        if (normalized === '/projects') {
             return "Displaying flagship deployments: \n- SIEM-Based Intrusion Detection (ELK)\n- ML Phishing Detection System (92% Accuracy)\n- Real-Time Network Security Dashboard (Python Dash)\n- PhishGuard Neural SaaS\n- Invisible Shield Steganography\n- Zero-Trust Identity & File Vault";
+        }
         if (normalized === '/about') {
             return "Okunola Olabanji: Cybersecurity Engineer (Detection, Threat Analysis & Offensive Security). I build systems that detect threats, and I break systems to find them first.";
         }
