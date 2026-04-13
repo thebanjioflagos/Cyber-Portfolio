@@ -25,9 +25,9 @@ export const blogPosts: BlogPost[] = [
         category: "Threat Intel",
         tags: ["JNDI", "RCE", "Java Security", "Exploit Analysis"],
         takeaways: [
-            "JNDI lookups must be strictly sanitized to prevent unauthenticated class loading.",
-            "Egress filtering is the most effective compensating control against remote callbacks.",
-            "Defense-in-depth requires disabling remote class loading at the JVM level."
+            "ATTACK: RCE via Log4Shell (JNDI Injection).",
+            "DETECTION: Sigma-based log normalization and correlation.",
+            "RESPONSE: Automated mitigation via IDS-integrated playbooks."
         ],
         readTime: "12 min read",
         content: (
@@ -57,9 +57,9 @@ export const blogPosts: BlogPost[] = [
         category: "Defensive Ops",
         tags: ["SIEM", "SOC", "Sigma", "Sysmon", "Detection Engineering"],
         takeaways: [
-            "Operationalizing MITRE ATT&CK requires high-fidelity endpoint telemetry like Sysmon.",
-            "Sigma rules provide a tool-agnostic detection format for cross-platform defense.",
-            "Prioritize process creation events (Event ID 1) for early stage intrusion detection."
+            "ATTACK: Lateral movement and credential harvesting.",
+            "DETECTION: Sysmon-to-Kibana pipeline for anomaly spotting.",
+            "RESPONSE: Dashboard alerts and incident isolation protocols."
         ],
         readTime: "10 min read",
         content: (
@@ -87,9 +87,9 @@ export const blogPosts: BlogPost[] = [
         category: "Offensive Strategy",
         tags: ["Red Team", "LOLBins", "EDR Bypass", "Stealth Persistence"],
         takeaways: [
-            "LOLBins allow adversaries to execute actions using cryptographically signed binaries.",
-            "Monitor parent-child process relationships to detect misuse of trusted OS components.",
-            "EDR rules should focus on behavioral anomalies rather than just file signatures."
+            "ATTACK: LOLBin exploitation (certutil/bitsadmin) for EDR bypass.",
+            "DETECTION: Behavioral anomaly monitoring of parent-child process chains.",
+            "RESPONSE: Strict execution policies and relationship-based alerting."
         ],
         readTime: "15 min read",
         content: (
