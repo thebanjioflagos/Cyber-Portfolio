@@ -13,20 +13,20 @@ const geistMono = Geist_Mono({
 });
 
 export const metadata: Metadata = {
-  title: "OKUNOLA OLABANJI | Cybersecurity Engineer & Security-Focused Fullstack Developer",
-  description: "High-performance portfolio of a certified Cybersecurity Analyst & Ethical Hacker with 5+ years of experience in system hardening, penetration testing, and secure fullstack development.",
-  keywords: ["Cybersecurity Engineer", "Ethical Hacker", "Fullstack Developer", "Security Audit", "Penetration Testing", "Lagos", "Nigeria", "Secure Software Development"],
+  title: "OKUNOLA OLABANJI | Cybersecurity Engineer (Detection, Threat Analysis & Offensive Security)",
+  description: "I build systems that detect threats, and I break systems to find them first. Expert in Detection Engineering, SIEM Architecture, and Offensive Security Operations.",
+  keywords: ["Cybersecurity Engineer", "Detection Engineering", "SIEM Architecture", "Offensive Security", "SOC Analyst", "Penetration Testing", "Threat Analysis", "Resilient Engineering"],
   authors: [{ name: "OKUNOLA OLABANJI" }],
   openGraph: {
     title: "OKUNOLA OLABANJI | Cybersecurity Engineer",
-    description: "Expert level security engineering and fullstack development.",
+    description: "I build systems that detect threats, and I break systems to find them first.",
     type: "website",
     locale: "en_US",
   },
   twitter: {
     card: "summary_large_image",
     title: "OKUNOLA OLABANJI | Cybersecurity Engineer",
-    description: "Expert level security engineering and fullstack development.",
+    description: "I build systems that detect threats, and I break systems to find them first.",
   },
 };
 
