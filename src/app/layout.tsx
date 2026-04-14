@@ -1,3 +1,6 @@
+import type { Metadata } from "next";
+import "./globals.css";
+
 // Switching to resilient system font stack to avoid build-time network failures
 const geistSans = { variable: "--font-geist-sans" };
 const geistMono = { variable: "--font-geist-mono" };
