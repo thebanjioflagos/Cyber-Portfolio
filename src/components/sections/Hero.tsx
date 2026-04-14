@@ -9,10 +9,20 @@ import Link from 'next/link';
 export const Hero = () => {
     return (
         <section className="relative min-h-screen flex items-center justify-center pt-24 pb-12 overflow-hidden">
+            {/* Background Image HUD Overlay */}
+            <div className="absolute inset-0 z-0 overflow-hidden pointer-events-none">
+                <motion.div 
+                    initial={{ scale: 1.1, opacity: 0 }}
+                    animate={{ scale: 1, opacity: 0.15 }}
+                    transition={{ duration: 2 }}
+                    className="absolute inset-0 bg-[url('/og-image.png')] bg-cover bg-center"
+                />
+            </div>
+
             {/* Background Grid & Ambient Glow */}
-            <div className="absolute inset-0 bg-grid opacity-20 pointer-events-none" />
-            <div className="absolute top-1/4 -left-1/4 w-1/2 h-1/2 bg-blue-500/20 blur-[120px] rounded-full pointer-events-none" />
-            <div className="absolute bottom-1/4 -right-1/4 w-1/2 h-1/2 bg-purple-500/20 blur-[120px] rounded-full pointer-events-none" />
+            <div className="absolute inset-0 bg-grid opacity-10 pointer-events-none" />
+            <div className="absolute top-1/4 -left-1/4 w-1/2 h-1/2 bg-primary/20 blur-[120px] rounded-full pointer-events-none" />
+            <div className="absolute bottom-1/4 -right-1/4 w-1/2 h-1/2 bg-primary/10 blur-[120px] rounded-full pointer-events-none" />
 
             <div className="max-w-7xl mx-auto px-6 grid grid-cols-1 lg:grid-cols-2 gap-12 items-center relative z-10">
 
@@ -79,45 +89,46 @@ export const Hero = () => {
                     transition={{ duration: 1.2, delay: 0.2, ease: [0.22, 1, 0.36, 1] }}
                     className="relative hidden lg:block"
                 >
-                    {/* Abstract Shield Visual */}
-                    <div className="relative aspect-square max-w-[500px] mx-auto">
-                        <div className="absolute inset-0 bg-primary/20 blur-[80px] rounded-full animate-pulse" />
-                        <div className="relative w-full h-full flex items-center justify-center">
-                            {/* Nested Rings */}
-                            <div className="absolute w-[100%] h-[100%] rounded-full border border-primary/20 border-dashed animate-[spin_20s_linear_infinite]" />
-                            <div className="absolute w-[80%] h-[80%] rounded-full border border-primary/40 border-dashed animate-[spin_15s_linear_infinite_reverse]" />
-                            <div className="absolute w-[60%] h-[60%] rounded-full border border-primary/60 border-dashed animate-[spin_10s_linear_infinite]" />
+                    {/* Premium HUD Visual Container */}
+                    <div className="relative aspect-video max-w-[600px] mx-auto group">
+                        <div className="absolute inset-0 bg-primary/30 blur-[60px] rounded-full group-hover:bg-primary/40 transition-colors" />
+                        
+                        <motion.div
+                            whileHover={{ y: -5 }}
+                            className="relative w-full h-full rounded-2xl overflow-hidden border border-white/10 glass shadow-2xl"
+                        >
+                            <img 
+                                src="/og-image.png" 
+                                alt="Security HUD" 
+                                className="w-full h-full object-cover opacity-80 group-hover:scale-105 transition-transform duration-700"
+                            />
+                            <div className="absolute inset-0 bg-gradient-to-t from-background via-transparent to-transparent opacity-60" />
+                        </motion.div>
 
-                            {/* Central Icon */}
-                            <div className="w-32 h-32 rounded-3xl glass flex items-center justify-center border-primary/40 shadow-[0_0_40px_rgba(59,130,246,0.3)]">
-                                <ShieldCheck className="w-16 h-16 text-primary" />
+                        {/* Floating Tech Elements Overlay */}
+                        <motion.div
+                            animate={{ y: [0, -10, 0] }}
+                            transition={{ duration: 4, repeat: Infinity, ease: 'easeInOut' }}
+                            className="absolute -top-6 -right-6 p-4 rounded-2xl glass border-white/10 flex items-center gap-3 shadow-xl backdrop-blur-md z-20"
+                        >
+                            <Cpu className="w-5 h-5 text-primary" />
+                            <div className="flex flex-col">
+                                <span className="text-[10px] text-muted-foreground font-bold uppercase">System Integrity</span>
+                                <span className="text-xs font-bold font-mono">99.99% VERIFIED</span>
                             </div>
+                        </motion.div>
 
-                            {/* Floating Tech Elements */}
-                            <motion.div
-                                animate={{ y: [0, -20, 0] }}
-                                transition={{ duration: 4, repeat: Infinity, ease: 'easeInOut' }}
-                                className="absolute top-0 right-10 p-4 rounded-2xl glass border-white/10 flex items-center gap-3"
-                            >
-                                <Cpu className="w-6 h-6 text-primary" />
-                                <div className="flex flex-col">
-                                    <span className="text-[10px] text-muted-foreground font-bold uppercase">Uptime</span>
-                                    <span className="text-sm font-bold">99.99%</span>
-                                </div>
-                            </motion.div>
-
-                            <motion.div
-                                animate={{ y: [0, 20, 0] }}
-                                transition={{ duration: 5, repeat: Infinity, ease: 'easeInOut', delay: 1 }}
-                                className="absolute bottom-10 left-0 p-4 rounded-2xl glass border-white/10 flex items-center gap-3"
-                            >
-                                <Lock className="w-6 h-6 text-primary" />
-                                <div className="flex flex-col">
-                                    <span className="text-[10px] text-muted-foreground font-bold uppercase">Latent Threats</span>
-                                    <span className="text-sm font-bold text-green-500">Zero Detected</span>
-                                </div>
-                            </motion.div>
-                        </div>
+                        <motion.div
+                            animate={{ y: [0, 10, 0] }}
+                            transition={{ duration: 5, repeat: Infinity, ease: 'easeInOut', delay: 1 }}
+                            className="absolute -bottom-6 -left-6 p-4 rounded-2xl glass border-white/10 flex items-center gap-3 shadow-xl backdrop-blur-md z-20"
+                        >
+                            <ShieldCheck className="w-5 h-5 text-primary" />
+                            <div className="flex flex-col">
+                                <span className="text-[10px] text-muted-foreground font-bold uppercase">Threat Shield</span>
+                                <span className="text-xs font-bold text-green-500 font-mono">ACTIVE MONITORING</span>
+                            </div>
+                        </motion.div>
                     </div>
                 </motion.div>
             </div>
