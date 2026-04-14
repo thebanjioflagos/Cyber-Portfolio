@@ -1,5 +1,5 @@
 import React from 'react';
-import { Shield, Lock, Terminal } from 'lucide-react';
+import { Shield, Lock, Terminal, Zap } from 'lucide-react';
 
 export const projects = [
     {
