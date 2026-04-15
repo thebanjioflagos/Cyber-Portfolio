@@ -73,5 +73,29 @@ export const projects = [
         tags: ["Flask", "PostgreSQL", "RBAC", "E2EE"],
         icon: <Shield className="w-10 h-10 text-primary" />,
         href: "https://github.com/thebanjioflagos/Zero-Trust-Vault"
+    },
+    {
+        title: "OmniLocal: Enterprise SaaS Platform",
+        category: "Fullstack / Cloud Infrastructure",
+        description: "A high-performance Next.js 14 platform with Supabase integration, featuring Sentry monitoring and advanced RBAC. Engineered for enterprise-scale local commerce orchestration.",
+        metrics: [
+            { label: "Uptime", value: "99.9%" },
+            { label: "Architecture", value: "Next.js 14" }
+        ],
+        tags: ["Next.js", "Supabase", "Sentry", "TypeScript"],
+        icon: <Cpu className="w-10 h-10 text-primary" />,
+        href: "https://github.com/thebanjioflagos/omnilocal-platform"
+    },
+    {
+        title: "Agentic-Sales: AI Orchestration Engine",
+        category: "AI / Fullstack Automation",
+        description: "Autonomous AI sales orchestration platform built with React and Supabase. Leverages agentic workflows to automate lead qualification and strategic outreach pipelines.",
+        metrics: [
+            { label: "Automation", value: "Full-Cycle" },
+            { label: "Logic", value: "Agentic" }
+        ],
+        tags: ["React", "AI Agents", "Supabase", "Automation"],
+        icon: <Zap className="w-10 h-10 text-primary" />,
+        href: "https://github.com/thebanjioflagos/agentic-sales-engine"
     }
 ];
