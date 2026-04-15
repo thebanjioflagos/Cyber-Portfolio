@@ -25,7 +25,10 @@ export const RecruiterMode = () => {
                                 Fast Path for Recruiters
                             </div>
                             <h2 className="text-3xl font-black mb-2 tracking-tight uppercase">OKUNOLA OLABANJI</h2>
-                            <p className="text-primary font-bold tracking-widest text-sm uppercase">Security Engineer & Fullstack Dev</p>
+                            <p className="text-primary font-bold tracking-widest text-sm uppercase flex items-center gap-2">
+                                Security Engineer & Fullstack Dev
+                                <span className="px-2 py-0.5 rounded-md bg-green-500/10 border border-green-500/20 text-[8px] text-green-500">GLOBAL REMOTE READY</span>
+                            </p>
                         </div>
 
                         <div className="space-y-4">
@@ -55,32 +58,32 @@ export const RecruiterMode = () => {
 
                                 <div className="absolute top-full left-0 right-0 mt-2 p-2 glass border-white/10 rounded-2xl opacity-0 translate-y-2 pointer-events-none group-hover/cv:opacity-100 group-hover/cv:translate-y-0 group-hover/cv:pointer-events-auto transition-all z-20">
                                     {[
-                                        // TIER 1: PRIMARY IDENTITY
-                                        { name: "Cybersecurity Engineer (Master Path)", file: "security-engineer.pdf", tier: "primary" },
+                                        // TIER 1: THE MASTER PATH
+                                        { name: "Security Engineer / Architect (Master)", file: "security-engineer.pdf", tier: "primary", description: "SIEM, Detection & Policy" },
                                         
-                                        // TIER 2: SPECIALIST VARIANTS
-                                        { name: "Penetration Tester (Offensive)", file: "pentester.pdf", tier: "specialist" },
-                                        { name: "SOC Analyst / Detection Engineer", file: "soc-analyst.pdf", tier: "specialist" },
-                                        { name: "Network Security Engineer (CCNP)", file: "network-security.pdf", tier: "specialist" },
+                                        // TIER 2: OFFENSIVE OPERATIONS
+                                        { name: "Offensive Security (Red Team / OSCP)", file: "pentester.pdf", tier: "specialist", description: "Breach Simulation & PenTesting" },
                                         
-                                        // TIER 3: STRATEGIC DEPTH
-                                        { name: "Red Team Specialist", file: "red-team.pdf", tier: "bench" },
-                                        { name: "Threat Intelligence Analyst", file: "threat-intel.pdf", tier: "bench" },
-                                        { name: "DevSecOps Engineer", file: "devsecops.pdf", tier: "bench" },
-                                        { name: "IT Security Consultant", file: "it-consultant.pdf", tier: "bench" }
+                                        // TIER 3: INFRASTRUCTURE & AUTOMATION
+                                        { name: "DevSecOps & Cloud Security", file: "devsecops.pdf", tier: "specialist", description: "CI/CD Hardening & IaC" },
                                     ].map((cv) => (
                                         <a
                                             key={cv.name}
                                             href={`/cv/${cv.file}`}
                                             download
-                                            className={`block px-4 py-3 rounded-lg hover:bg-white/5 text-xs font-bold transition-colors ${
-                                                cv.tier === 'primary' ? 'bg-primary/10 text-primary border border-primary/20' : ''
+                                            className={`group/item block px-4 py-3 rounded-xl hover:bg-white/5 transition-all mb-1 ${
+                                                cv.tier === 'primary' ? 'bg-primary/10 border border-primary/20' : 'border border-white/5'
                                             }`}
                                         >
-                                            <div className="flex items-center justify-between">
-                                                {cv.name}
+                                            <div className="flex items-center justify-between mb-1">
+                                                <span className={`text-[11px] font-black uppercase ${cv.tier === 'primary' ? 'text-primary' : 'text-foreground'}`}>
+                                                    {cv.name}
+                                                </span>
                                                 {cv.tier === 'primary' && <Star className="w-3 h-3 fill-primary" />}
                                             </div>
+                                            <span className="text-[9px] text-muted-foreground block font-bold uppercase tracking-tight opacity-70">
+                                                {cv.description}
+                                            </span>
                                         </a>
                                     ))}
                                 </div>
@@ -143,17 +146,17 @@ export const RecruiterMode = () => {
                         <div className="p-8 rounded-3xl glass border-white/10 space-y-6">
                             <h3 className="text-xl font-black flex items-center gap-2 uppercase tracking-tight">
                                 <Code className="w-5 h-5 text-primary" />
-                                Systems Thinking
+                                Remote-First Workflow
                             </h3>
                             <ul className="space-y-4">
                                 {[
-                                    "E2EE for distributed file systems",
-                                    "Decentralized Identity on Blockchain",
-                                    "High-throughput packet inspection",
-                                    "Secure Lifecycle (SDLC) integration"
+                                    "Asynchronous collaboration (Slack/Discord)",
+                                    "Global Timezone Overrides (GMT/EST/CET)",
+                                    "Full Git/GitHub CI/CD Automation",
+                                    "Document-driven Security Design (DDSD)"
                                 ].map((item, i) => (
                                     <li key={i} className="flex gap-3 items-start">
-                                        <CheckCircle2 className="w-4 h-4 text-primary mt-1 shrink-0" />
+                                        <Clock className="w-4 h-4 text-primary mt-1 shrink-0" />
                                         <span className="text-sm font-semibold text-foreground/80">{item}</span>
                                     </li>
                                 ))}
