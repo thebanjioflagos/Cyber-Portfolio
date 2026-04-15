@@ -48,7 +48,7 @@ export const projects = [
         ],
         tags: ["FastAPI", "Next.js", "Redis", "Security-as-a-Service"],
         icon: <Zap className="w-10 h-10 text-primary" />,
-        href: "https://github.com/thebanjioflagos/web_vulnerability_scanner"
+        href: "https://github.com/thebanjioflagos/PhishGuard-SaaS"
     },
     {
         title: "Invisible Shield: Cryptographic Steganography",
@@ -60,7 +60,7 @@ export const projects = [
         ],
         tags: ["Python", "Cryptography", "Steganography", "PIL"],
         icon: <Lock className="w-10 h-10 text-primary" />,
-        href: "https://github.com/thebanjioflagos/ImageSteno"
+        href: "https://github.com/thebanjioflagos/Invisible-Shield"
     },
     {
         title: "Zero-Trust Identity & File Vault",
@@ -72,6 +72,6 @@ export const projects = [
         ],
         tags: ["Flask", "PostgreSQL", "RBAC", "E2EE"],
         icon: <Shield className="w-10 h-10 text-primary" />,
-        href: "https://github.com/thebanjioflagos/UserAuthFile"
+        href: "https://github.com/thebanjioflagos/Zero-Trust-Vault"
     }
 ];
