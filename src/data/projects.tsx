@@ -84,7 +84,7 @@ export const projects = [
         ],
         tags: ["Next.js", "Supabase", "Sentry", "TypeScript"],
         icon: <Cpu className="w-10 h-10 text-primary" />,
-        href: "https://github.com/thebanjioflagos/omnilocal-platform"
+        href: "#contact"
     },
     {
         title: "Agentic-Sales: AI Orchestration Engine",
@@ -96,6 +96,6 @@ export const projects = [
         ],
         tags: ["React", "AI Agents", "Supabase", "Automation"],
         icon: <Zap className="w-10 h-10 text-primary" />,
-        href: "https://github.com/thebanjioflagos/agentic-sales-engine"
+        href: "#contact"
     }
 ];
