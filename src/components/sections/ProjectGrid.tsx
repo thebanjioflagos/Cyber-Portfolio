@@ -10,6 +10,10 @@ import { projects } from '@/data/projects';
 
 
 export const ProjectGrid = () => {
+    const [filter, setFilter] = React.useState<'All' | 'Security' | 'Fullstack'>('All');
+
+    const filteredProjects = projects.filter(p => filter === 'All' || p.type === filter);
+
     return (
         <section id="projects" className="py-24 px-6 relative overflow-hidden scroll-mt-24">
             {/* Visual Accents */}
@@ -23,26 +27,35 @@ export const ProjectGrid = () => {
                             Elite Case <span className="text-primary italic">Studies.</span>
                         </h2>
                         <p className="text-muted-foreground text-lg leading-relaxed">
-                            Demonstrating real-world security capability, systems thinking, and production-grade engineering across diverse domains.
+                            Demonstrating real-world security capability, system architecture, and production-grade fullstack engineering.
                         </p>
                     </div>
-                    <div className="hidden md:flex gap-4">
-                        {/* Filter buttons could go here */}
-                        <span className="px-4 py-2 rounded-lg bg-white/5 border border-white/10 text-xs font-bold uppercase tracking-widest text-primary">
-                            All Security Domains
-                        </span>
+                    <div className="flex flex-wrap gap-2">
+                        {['All', 'Security', 'Fullstack'].map((cat) => (
+                            <button
+                                key={cat}
+                                onClick={() => setFilter(cat as any)}
+                                className={`px-4 py-2 rounded-lg border text-xs font-bold uppercase tracking-widest transition-all ${filter === cat
+                                        ? 'bg-primary text-primary-foreground border-primary shadow-[0_0_15px_rgba(59,130,246,0.3)] scale-105'
+                                        : 'bg-white/5 border-white/10 text-muted-foreground hover:border-primary/40'
+                                    }`}
+                            >
+                                {cat}
+                            </button>
+                        ))}
                     </div>
                 </div>
 
                 <motion.div
+                    layout
                     initial={{ opacity: 0, y: 20 }}
                     whileInView={{ opacity: 1, y: 0 }}
                     viewport={{ once: true }}
                     transition={{ duration: 0.8 }}
                     className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8"
                 >
-                    {projects.map((project, idx) => (
-                        <ProjectCard key={idx} {...project} />
+                    {filteredProjects.map((project, idx) => (
+                        <ProjectCard key={project.title} {...project} />
                     ))}
                 </motion.div>
 
