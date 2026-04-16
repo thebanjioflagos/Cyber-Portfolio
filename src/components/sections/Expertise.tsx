@@ -56,7 +56,7 @@ export const Expertise = () => {
                 <div className="mt-20 pt-12 border-t border-white/5">
                     <span className="text-[10px] uppercase tracking-[0.3em] font-bold text-muted-foreground mb-8 block text-center">Industry Validated Certifications</span>
                     <div className="flex flex-wrap justify-center items-center gap-8 md:gap-16 opacity-60">
-                        {["OSCP", "CEH", "CompTIA Security+", "Azure Cloud Admin"].map(cert => (
+                        {["OSCP", "CompTIA Security+"].map(cert => (
                             <span key={cert} className="text-xl md:text-2xl font-black tracking-tighter text-foreground/80 hover:text-primary transition-colors cursor-default">
                                 {cert}
                             </span>

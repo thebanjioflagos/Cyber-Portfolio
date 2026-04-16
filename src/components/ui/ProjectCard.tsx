@@ -69,17 +69,38 @@ export const ProjectCard = ({ title, category, description, metrics, tags, icon,
                 </div>
 
                 {/* Footer */}
-                <div className="mt-auto pt-6 border-t border-white/5 flex items-center justify-between">
-                    <Link
-                        href={href}
-                        className="flex items-center gap-2 text-sm font-bold text-primary hover:underline group/btn"
-                    >
-                        Case Study
-                        <ArrowRight className="w-4 h-4 group-hover/btn:translate-x-1 transition-transform" />
-                    </Link>
+                <div className="mt-auto pt-6 border-t border-white/5 flex items-center justify-between font-mono">
+                    {href === '#contact' ? (
+                        <div className="flex flex-col gap-1">
+                            <span className="text-[10px] text-primary font-bold uppercase tracking-widest flex items-center gap-1">
+                                <Lock className="w-3 h-3" />
+                                Proprietary IP
+                            </span>
+                            <Link
+                                href="#contact"
+                                className="text-[11px] font-bold text-foreground/60 hover:text-primary transition-colors underline"
+                            >
+                                Request Technical Abstract
+                            </Link>
+                        </div>
+                    ) : (
+                        <Link
+                            href={href}
+                            target="_blank"
+                            rel="noopener noreferrer"
+                            className="flex items-center gap-2 text-sm font-bold text-primary hover:underline group/btn"
+                        >
+                            Case Study
+                            <ArrowRight className="w-4 h-4 group-hover/btn:translate-x-1 transition-transform" />
+                        </Link>
+                    )}
                     <div className="flex gap-3">
-                        <Github className="w-4 h-4 text-muted-foreground hover:text-foreground cursor-pointer" />
-                        <ExternalLink className="w-4 h-4 text-muted-foreground hover:text-foreground cursor-pointer" />
+                        {href !== '#contact' && (
+                            <>
+                                <Github className="w-4 h-4 text-muted-foreground hover:text-foreground cursor-pointer" />
+                                <ExternalLink className="w-4 h-4 text-muted-foreground hover:text-foreground cursor-pointer" />
+                            </>
+                        )}
                     </div>
                 </div>
             </div>

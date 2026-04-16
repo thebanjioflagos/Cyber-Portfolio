@@ -36,7 +36,7 @@ export const RecruiterMode = () => {
                                 <Award className="w-5 h-5 text-primary" />
                                 <div>
                                     <span className="text-[10px] font-bold uppercase text-muted-foreground block">Key Certifications</span>
-                                    <span className="text-sm font-bold">OSCP, CEH, Security+, Azure Admin</span>
+                                    <span className="text-sm font-bold">OSCP, CompTIA Security+</span>
                                 </div>
                             </div>
                             <div className="flex items-center gap-3 p-4 rounded-xl glass border-white/10">
@@ -60,10 +60,10 @@ export const RecruiterMode = () => {
                                     {[
                                         // TIER 1: THE MASTER PATH
                                         { name: "Security Engineer / Architect (Master)", file: "security-engineer.pdf", tier: "primary", description: "SIEM, Detection & Policy" },
-                                        
+
                                         // TIER 2: OFFENSIVE OPERATIONS
                                         { name: "Offensive Security (Red Team / OSCP)", file: "pentester.pdf", tier: "specialist", description: "Breach Simulation & PenTesting" },
-                                        
+
                                         // TIER 3: INFRASTRUCTURE & AUTOMATION
                                         { name: "DevSecOps & Cloud Security", file: "devsecops.pdf", tier: "specialist", description: "CI/CD Hardening & IaC" },
                                     ].map((cv) => (
@@ -71,9 +71,8 @@ export const RecruiterMode = () => {
                                             key={cv.name}
                                             href={`/cv/${cv.file}`}
                                             download
-                                            className={`group/item block px-4 py-3 rounded-xl hover:bg-white/5 transition-all mb-1 ${
-                                                cv.tier === 'primary' ? 'bg-primary/10 border border-primary/20' : 'border border-white/5'
-                                            }`}
+                                            className={`group/item block px-4 py-3 rounded-xl hover:bg-white/5 transition-all mb-1 ${cv.tier === 'primary' ? 'bg-primary/10 border border-primary/20' : 'border border-white/5'
+                                                }`}
                                         >
                                             <div className="flex items-center justify-between mb-1">
                                                 <span className={`text-[11px] font-black uppercase ${cv.tier === 'primary' ? 'text-primary' : 'text-foreground'}`}>
