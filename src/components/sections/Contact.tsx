@@ -67,8 +67,15 @@ export const Contact = () => {
                                 {method.icon}
                             </div>
                             <span className="text-[10px] uppercase font-bold text-muted-foreground tracking-widest mb-2">{method.label}</span>
-                            <h3 className="text-xl font-bold mb-4">{method.name}</h3>
-                            <p className="text-sm font-bold text-foreground mb-8 truncate w-full">{method.value}</p>
+                            <div className="flex flex-col gap-1">
+                                <span className="text-[10px] text-muted-foreground uppercase font-bold tracking-widest">Global Outreach</span>
+                                <a href="mailto:banji@thebanjioflagos.com" className="text-lg font-bold hover:text-primary transition-colors">
+                                    banji@thebanjioflagos.com
+                                </a>
+                                <span className="text-[9px] text-primary font-bold uppercase italic mt-1">
+                                    Secure Domain: Verified Engineering Account
+                                </span>
+                            </div>
 
                             <div className="mt-auto flex items-center gap-2 text-primary text-xs font-black uppercase tracking-widest">
                                 Connect Now

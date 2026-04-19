@@ -14,6 +14,7 @@ interface ProjectCardProps {
     tags: string[];
     icon: React.ReactNode;
     href: string;
+    technicalAbstract?: string;
 }
 
 export const ProjectCard = ({ title, category, description, metrics, tags, icon, href }: ProjectCardProps) => {

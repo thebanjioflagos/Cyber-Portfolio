@@ -32,11 +32,18 @@ export const RecruiterMode = () => {
                         </div>
 
                         <div className="space-y-4">
-                            <div className="flex items-center gap-3 p-4 rounded-xl glass border-white/10">
+                            <div className="flex items-center gap-3 p-4 rounded-xl glass border-white/10 relative group/cert">
                                 <Award className="w-5 h-5 text-primary" />
                                 <div>
                                     <span className="text-[10px] font-bold uppercase text-muted-foreground block">Key Certifications</span>
                                     <span className="text-sm font-bold">OSCP, CompTIA Security+</span>
+
+                                    {/* Verification Overlay */}
+                                    <div className="flex gap-2 mt-1">
+                                        <a href="#" className="text-[9px] font-black text-primary hover:underline uppercase">Verify OSID</a>
+                                        <span className="text-[9px] text-muted-foreground">•</span>
+                                        <a href="#" className="text-[9px] font-black text-primary hover:underline uppercase">Verify Credly</a>
+                                    </div>
                                 </div>
                             </div>
                             <div className="flex items-center gap-3 p-4 rounded-xl glass border-white/10">

@@ -75,7 +75,7 @@ export const FlagshipProject = () => {
                             Threat <span className="text-primary italic">Intelligence</span> <br /> Dashboard.
                         </h2>
                         <p className="text-muted-foreground text-lg mb-8 leading-relaxed">
-                            This is not a mockup. It's a real-time reactive engine demonstratng detection logic, mitigation strategies, and system resilience.
+                            A high-fidelity **Event-Driven Simulation Engine** demonstrating real-time detection logic, mitigation strategies, and defensive resilience.
                         </p>
 
                         <div className="space-y-4">

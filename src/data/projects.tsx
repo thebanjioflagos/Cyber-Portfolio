@@ -18,8 +18,8 @@ export const projects: Project[] = [
         category: "Detection Engineering / SOC",
         description: "Built a production-grade ELK Stack SIEM pipeline ingesting Sysmon logs and live network traffic. Implemented Sigma detection rules for brute force and privilege escalation.",
         metrics: [
-            { label: "Detection Latency", value: "-30%" },
-            { label: "Threat Coverage", value: "95%+" }
+            { label: "Baseline Detection", value: "30% faster" },
+            { label: "MITRE Coverage", value: "95% (Top 10)" }
         ],
         tags: ["ELK Stack", "Sysmon", "Sigma Rules", "MITRE ATT&CK"],
         icon: <Shield className="w-10 h-10 text-primary" />,
@@ -53,17 +53,24 @@ export const projects: Project[] = [
         type: 'Security'
     },
     {
-        title: "PhishGuard: Neural Security SaaS",
+        title: "PhishGuard: Advanced ML Security Pipeline",
         category: "Security Engineering / SaaS",
-        description: "A production-ready SaaS platform for real-time phishing detection. Features a FastAPI backend, JWT-based RBAC, and a glassmorphism dashboard.",
+        description: "A production-ready SaaS platform for real-time phishing detection. Features an Ensemble Learning (Random Forest) classifier, FastAPI backend, and JWT-based RBAC.",
         metrics: [
-            { label: "Confidence", value: "High-Fidelity" },
+            { label: "Confidence", value: "92% Precision" },
             { label: "Auth", value: "JWT-Secure" }
         ],
-        tags: ["FastAPI", "Next.js", "Redis", "Security-as-a-Service"],
+        tags: ["FastAPI", "Random Forest", "Scikit-Learn", "Redis"],
         icon: <Zap className="w-10 h-10 text-primary" />,
         href: "https://github.com/thebanjioflagos/PhishGuard-SaaS",
-        type: 'Security'
+        type: 'Security',
+        technicalAbstract: `
+## Ensemble Learning Pipeline
+Transitioned from synthetic prototype data to ISCX URL 2016 and PhiUSIIL public corpora for production-level precision.
+- **Engine**: Random Forest (Ensemble Learning) for high interpretability and low-latency edge inference.
+- **Feature Engineering**: NLP-based extraction focusing on TLD Entropy and Path Complexity.
+- **Precision**: 92.4% on adversarial datasets.
+        `
     },
     {
         title: "Invisible Shield: Cryptographic Steganography",
@@ -96,7 +103,7 @@ export const projects: Project[] = [
         category: "Fintech / Fullstack",
         description: "Bank-grade international remittance platform with real-time currency conversion and multi-layer RBAC. Engineered for low-latency transactions.",
         metrics: [
-            { label: "SLA", value: "99.99%" },
+            { label: "Atomic Integrity", value: "Verified" },
             { label: "Stack", value: "Next.js/Supabase" }
         ],
         tags: ["Next.js", "Supabase", "TypeScript", "Fintech"],
