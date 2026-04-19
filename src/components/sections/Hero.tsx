@@ -11,7 +11,7 @@ export const Hero = () => {
         <section className="relative min-h-screen flex items-center justify-center pt-24 pb-12 overflow-hidden">
             {/* Background Image HUD Overlay */}
             <div className="absolute inset-0 z-0 overflow-hidden pointer-events-none">
-                <motion.div 
+                <motion.div
                     initial={{ scale: 1.1, opacity: 0 }}
                     animate={{ scale: 1, opacity: 0.15 }}
                     transition={{ duration: 2 }}
@@ -76,8 +76,8 @@ export const Hero = () => {
                         </div>
                         <div className="w-[1px] h-10 bg-white/10" />
                         <div className="flex flex-col gap-1">
-                            <span className="text-2xl font-bold text-foreground">100%</span>
-                            <span className="text-xs uppercase tracking-wider font-semibold">Secure Delivery</span>
+                            <span className="text-2xl font-bold text-foreground">99.9%</span>
+                            <span className="text-xs uppercase tracking-wider font-semibold">Resilient Delivery</span>
                         </div>
                     </div>
                 </motion.div>
@@ -92,14 +92,14 @@ export const Hero = () => {
                     {/* Premium HUD Visual Container */}
                     <div className="relative aspect-video max-w-[600px] mx-auto group">
                         <div className="absolute inset-0 bg-primary/30 blur-[60px] rounded-full group-hover:bg-primary/40 transition-colors" />
-                        
+
                         <motion.div
                             whileHover={{ y: -5 }}
                             className="relative w-full h-full rounded-2xl overflow-hidden border border-white/10 glass shadow-2xl"
                         >
-                            <img 
-                                src="/og-image.png" 
-                                alt="Security HUD" 
+                            <img
+                                src="/og-image.png"
+                                alt="Security HUD"
                                 className="w-full h-full object-cover opacity-80 group-hover:scale-105 transition-transform duration-700"
                             />
                             <div className="absolute inset-0 bg-gradient-to-t from-background via-transparent to-transparent opacity-60" />
