@@ -10,6 +10,7 @@ export interface Project {
     icon: React.ReactNode;
     href: string;
     type: 'Security' | 'Fullstack';
+    technicalAbstract?: string;
 }
 
 export const projects: Project[] = [
